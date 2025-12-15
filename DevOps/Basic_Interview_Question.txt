@@ -16,8 +16,90 @@ Continuous Integration and Delivery (CI/CD): Frequent releases.
 Monitoring & Feedback: Observability for improvement.
 Security (DevSecOps): Shift-left approach for security.
 ============================================================================================================================================
-
-Q. What is CI/CD and why is it important in DevOps?
+Q3. Explain the DevOps lifecycle.
+Answer:
+Plan → Code → Build → Test → Release → Deploy → Operate → Monitor
+Continuous feedback loops feed improvements back to the planning phase.
+=============================================================================================================================================
+Q4. What is the difference between Agile and DevOps?
+Answer:
+Agile: Focuses on software development methodology for iterative 
+development.
+DevOps: Focuses on end-to-end delivery, including operations and 
+infrastructure.
+==============================================================================================================================================
+Q5. What metrics do you track in a DevOps pipeline?
+Answer:
+Deployment frequency.
+Lead time for changes.
+Change failure rate.
+Mean time to recovery (MTTR).
+Pipeline success rate.
+================================================================================================================================================
+Q6. What is DevSecOps?
+Answer:
+DevOps + Security.
+Security is integrated into the pipeline (static analysis, secrets scanning, 
+dependency checks) instead of being an afterthought.
+=================================================================================================================================================
+Q7. What is shift-left testing in DevOps?
+Answer:
+Testing early in the development cycle to catch defects sooner.
+Implemented using unit tests, automated tests in CI
+=================================================================================================================================================
+Q8. What is the difference between “pets vs cattle” analogy in infrastructure?
+Answer:
+Pets: Individually maintained servers (traditional approach).
+Cattle: Disposable, identical servers (cloud-native approach). If one fails, 
+replace it.
+==================================================================================================================================================
+Q9. How do you handle cultural change when adopting DevOps?
+Answer:
+Promote collaboration across teams.
+Introduce automation gradually.
+Train teams in CI/CD, IaC, Cloud.
+Use metrics to show success.
+==================================================================================================================================================
+Q10. Your CI pipeline takes 30 minutes to run tests. How can you optimize it?
+Answer:
+1. Use parallel test execution.
+2. Cache dependencies (Maven, npm).
+3. Use Docker images with pre-installed dependencies.
+4. Shift left by running unit tests before integration tests.
+==================================================================================================================================================
+Q11. You find that a secret key is accidentally committed to Git. What do you do?
+Answer:
+1. Immediately revoke the key.
+2. Rotate credentials in IAM.
+3. Remove key from Git history using git filter-branch or BFG Repo Cleaner.
+4. Implement pre-commit hooks and use secret scanning tools (e.g., 
+TruffleHog)
+==================================================================================================================================================
+Q12. One microservice is slow; others are fine. How do you identify the bottleneck?
+Answer:
+1. Enable distributed tracing (AWS X-Ray, Jaeger), In Azure We can use Application Insight to check which Srvices are take longer than usual.
+2. Check service-level metrics (CPU, memory, response time).
+3. Analyze database queries or external API latency.
+==================================================================================================================================================
+Q13. Your team needs secrets management across multiple environments. How do you handle it?
+Answer:
+1. Use HashiCorp Vault
+2. AWS Secrets Manager
+3. Kubernetes Secrets (with encryption).
+4. Azure Key Vault.
+==================================================================================================================================================
+Q14. Your build artifacts need to be shared across multiple pipelines. How do you 
+store them?
+Answer:
+Use artifact repository like Nexus, Artifactory, Jfrog or S3 bucket with lifecycle 
+policies.
+================================================================================================================================================
+Q15. You have 100+ servers to configure. How do you automate this?
+Answer:
+Use Ansible playbooks or Terraform + Ansible combo.
+Store configs in Git for version control.
+=================================================================================================================================================
+Q16. What is CI/CD and why is it important in DevOps?
 Answer:
 CI (Continuous Integration) is the practice of frequently integrating code 
 into a shared repository and running automated tests to detect issues early.
@@ -29,15 +111,27 @@ Reduces integration problems.
 Speeds up release cycles.
 Improves quality via automated testing.
 ============================================================================================================================================
-Q2. What is the difference between Continuous Delivery and Continuous 
+Q17. What is the difference between Continuous Delivery and Continuous 
 Deployment?
 Answer:
 Continuous Delivery: Deployment to production requires manual approval.
 Continuous Deployment: Fully automated to production after tests pass.
 =============================================================================================================================================
-Q3. Explain Blue/Green Deployment in a Jenkins pipeline.
+Q18. Explain Blue/Green Deployment in a Jenkins pipeline.
 Answer:
 Deploy new version to Green environment while Blue is live.
 Test Green, then switch traffic.
 Rollback by pointing back to Blue if issues occur.
 =============================================================================================================================================
+Q19. Difference between Jenkins and GitHub Actions?
+Answer:
+Jenkins: Self-hosted, plugin-rich, more customizable.
+GitHub Actions: Cloud-based, built into GitHub, YAML workflows, auto
+scaling runners
+==============================================================================================================================================
+Q20. What is Infrastructure as Code (IaC)?
+Answer:
+1. IaC is the practice of managing infrastructure using code, not manual 
+processes.
+2. Benefits: Consistency, Version Control, Automation.
+===============================================================================================================================================
