@@ -1,1 +1,43 @@
+Q1. What is DevOps and why is it important?
+Answer:
+DevOps is a cultural and technical movement that integrates development and 
+operations teams to improve collaboration, automation, and delivery speed.
+Benefits:
+Faster time to market.
+Reduced failure rate.
+Faster recovery from failures.
+Key practices: CI/CD, Infrastructure as Code, Monitoring, Automation.
+==========================================================================================================================================
+Q2. What are the main principles of DevOps?
+Answer:
+Automation: Everything from builds to deployments.
+Collaboration: Break silos between Dev & Ops.
+Continuous Integration and Delivery (CI/CD): Frequent releases.
+Monitoring & Feedback: Observability for improvement.
+Security (DevSecOps): Shift-left approach for security.
+============================================================================================================================================
 
+Q. What is CI/CD and why is it important in DevOps?
+Answer:
+CI (Continuous Integration) is the practice of frequently integrating code 
+into a shared repository and running automated tests to detect issues early.
+CD (Continuous Delivery/Deployment) ensures that the application is 
+automatically deployed to staging or production environments after passing 
+tests.
+Importance:
+Reduces integration problems.
+Speeds up release cycles.
+Improves quality via automated testing.
+============================================================================================================================================
+Q2. What is the difference between Continuous Delivery and Continuous 
+Deployment?
+Answer:
+Continuous Delivery: Deployment to production requires manual approval.
+Continuous Deployment: Fully automated to production after tests pass.
+=============================================================================================================================================
+Q3. Explain Blue/Green Deployment in a Jenkins pipeline.
+Answer:
+Deploy new version to Green environment while Blue is live.
+Test Green, then switch traffic.
+Rollback by pointing back to Blue if issues occur.
+=============================================================================================================================================
